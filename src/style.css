@@ -1,0 +1,103 @@
+:root {
+  /* Page colors; each level overrides the card and accent colors via themeVars() */
+  --bg: #0a0c1a;
+  --text: #eef2ff;
+  --muted: #aaadba;
+  --card-front: #1b4359;
+  --card-front-border: #3e6f88;
+  --card-back: #234f68;
+  --card-back-border: #5a809a;
+  --card-back-label: #cfd6e6;
+  --accent: #86d3f5;
+  --on-accent: #0b1020;
+  --danger-text: #f6b4a1;
+  --track: #112b3a;
+  --font-display: 'Lexend', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+
+  color-scheme: dark;
+  font-family: var(--font-body);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.btn {
+  min-width: 168px;
+  height: 48px;
+  padding: 0 1.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 24px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+}
+
+.btn-outline {
+  border-color: var(--muted);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-ghost {
+  border-color: var(--card-back-border);
+  background: transparent;
+  color: var(--text);
+}
+
+.link-btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-btn:hover:not(:disabled) {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.link-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--track);
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
